@@ -23,28 +23,28 @@ def add_background(image_file):
     }}
     label {{
         color: black; /* Textfärg för etiketter */
-        background-color: rgba(255, 255, 255, 0.8); /* Ljus bakgrund för etiketter */
-        padding: 5px;
-        border-radius: 5px;
-        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
-        font-size: 1.2em;
+        background-color: rgba(255, 255, 255, 0.9); /* Ljus bakgrund för etiketter */
+        padding: 5px; /* Padding för etiketter */
+        border-radius: 5px; /* Rundade hörn */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Skugga för bättre kontrast */
+        font-size: 1.2em; /* Öka storlek på etiketter */
     }}
     .stTextInput {{
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(255, 255, 255, 0.95); /* Justera bakgrundsfärgen */
         color: black;
         border: 1px solid #ccc;
         border-radius: 10px;
-        padding: 10px;
-        margin-bottom: 10px;
+        padding: 12px; /* Öka padding för mer utrymme */
+        margin-bottom: 15px; /* Öka utrymmet mellan fälten */
     }}
     .stButton {{
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
         border-radius: 10px;
         padding: 12px;
-        margin-top: 5px;
-        transition: background-color 0.3s;
+        margin-top: 10px; /* Mer utrymme ovanför knappar */
         font-size: 1.1em; /* Öka storleken på texten i knappar */
+        transition: background-color 0.3s;
     }}
     .stButton:hover {{
         background-color: rgba(0, 0, 0, 0.9);
