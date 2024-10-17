@@ -22,7 +22,7 @@ def add_background(image_file):
     }}
     h2, h3, h4, p {{
         color: black;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     }}
     .stTextInput, .stButton {{
         background-color: rgba(255, 255, 255, 0.85); /* Mer vit och lite mer transparens */
