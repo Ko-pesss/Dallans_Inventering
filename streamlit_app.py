@@ -103,3 +103,4 @@ if st.button("Visa inventering"):
 if st.button("Ladda ner CSV-fil"):
     with open(file_name, 'rb') as f:
         st.download_button('Ladda ner CSV', f, file_name)
+
