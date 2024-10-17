@@ -19,42 +19,40 @@ def add_background(image_file):
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         font-size: 2.5em;
+        text-align: center; /* Centrera rubriken */
     }}
-    h2, h3, h4, p {{
-        color: black;
-        text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.8);
+    label {{
+        color: black; /* Textfärg för etiketter */
+        background-color: rgba(255, 255, 255, 0.8); /* Ljus bakgrund för etiketter */
+        padding: 5px;
+        border-radius: 5px;
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        font-size: 1.2em;
     }}
-    .stTextInput, .stButton {{
-        background-color: rgba(255, 255, 255, 0.85); /* Mer vit och lite mer transparens */
+    .stTextInput {{
+        background-color: rgba(255, 255, 255, 0.85);
         color: black;
         border: 1px solid #ccc;
-        border-radius: 10px; /* Rundade hörn */
-        padding: 10px; /* Lägga till padding */
-        margin-bottom: 10px; /* Utrymme mellan inmatningsfält */
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
     }}
-   .stButton {{
+    .stButton {{
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
         border-radius: 10px;
         padding: 12px;
         margin-top: 5px;
         transition: background-color 0.3s;
+        font-size: 1.1em; /* Öka storleken på texten i knappar */
     }}
     .stButton:hover {{
         background-color: rgba(0, 0, 0, 0.9);
     }}
-    /* Specifik styling för etiketter */
-    label {{
-        color: black; /* Ändra textfärg till svart */
-        background-color: rgba(255, 255, 255, 0.7); /* Lägga till bakgrund på etiketter */
-        padding: 5px; /* Padding runt texten */
-        border-radius: 5px; /* Rundade hörn */
-        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8); /* Skugga för bättre kontrast */
-        font-size: 1.2em; /* Öka storlek på etiketter */
-    }}
     </style>
     """
     st.markdown(css, unsafe_allow_html=True)
+
 
 # Sökväg till din bild
 image_path = "Dallansgolf.webp"  # Se till att detta filnamn är korrekt
