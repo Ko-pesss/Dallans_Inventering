@@ -17,33 +17,33 @@ def add_background(image_file):
     }}
     h1 {{
         color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         font-size: 2.5em;
-        text-align: center; /* Centrera rubriken */
+        text-align: center;
     }}
     label {{
         color: black; /* Textfärg för etiketter */
         background-color: rgba(255, 255, 255, 0.9); /* Ljus bakgrund för etiketter */
-        padding: 5px; /* Padding för etiketter */
-        border-radius: 5px; /* Rundade hörn */
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Skugga för bättre kontrast */
-        font-size: 1.2em; /* Öka storlek på etiketter */
+        padding: 5px; 
+        border-radius: 5px; 
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        font-size: 1.2em; 
     }}
     .stTextInput {{
-        background-color: rgba(255, 255, 255, 0.95); /* Justera bakgrundsfärgen */
-        color: black;
+        background-color: rgba(50, 50, 50, 0.8); /* Mörk bakgrund för inmatningsfält */
+        color: white; /* Ändra textfärg till vit */
         border: 1px solid #ccc;
         border-radius: 10px;
-        padding: 12px; /* Öka padding för mer utrymme */
-        margin-bottom: 15px; /* Öka utrymmet mellan fälten */
+        padding: 12px;
+        margin-bottom: 15px;
     }}
     .stButton {{
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
         border-radius: 10px;
         padding: 12px;
-        margin-top: 10px; /* Mer utrymme ovanför knappar */
-        font-size: 1.1em; /* Öka storleken på texten i knappar */
+        margin-top: 10px;
+        font-size: 1.1em;
         transition: background-color 0.3s;
     }}
     .stButton:hover {{
