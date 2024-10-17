@@ -22,7 +22,7 @@ def add_background(image_file):
     }}
     h2, h3, h4, p {{
         color: black;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.8);
     }}
     .stTextInput, .stButton {{
         background-color: rgba(255, 255, 255, 0.85); /* Mer vit och lite mer transparens */
@@ -67,10 +67,10 @@ def add_product(produktnamn, kvantitet, plats, datum):
         writer.writerow([produktnamn, kvantitet, plats, datum])
 
 # Huvudgränssnitt med Streamlit
-st.title("Inventeringsprogram")
+st.title("Dallans Inventeringsprogram")
 
 # Inmatningsfält
-produktnamn = st.text_input("Produktnamn")
+produktnamn = st.text_input("Spoltyp")
 kvantitet = st.number_input("Kvantitet", min_value=0)
 plats = st.text_input("Plats (linje/avdelning)")
 datum = st.text_input("Datum (ÅÅÅÅ-MM-DD)")
