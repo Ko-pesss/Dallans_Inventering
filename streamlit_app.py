@@ -16,7 +16,7 @@ def add_background(image_file):
         background-attachment: fixed;
     }}
     h1 {{
-        color: white;
+        color: black;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         font-size: 2.5em;
     }}
