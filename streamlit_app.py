@@ -14,44 +14,48 @@ def add_background(image_file):
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        color: #ffffff; /* Vit textfärg för kontrast */
     }}
     h1 {{
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        font-size: 3em; /* Öka storlek på rubriken */
-        text-align: center;
-        margin-top: 20px; /* Mer utrymme ovanför rubriken */
+        font-size: 2.5em;
+        text-align: center; /* Centrera rubriken */
+        font-weight: bold; /* Gör rubriken fetare */
     }}
     label {{
-        color: white; /* Vit färg för etiketter */
-        font-size: 1.2em; 
-        margin-top: 10px; /* Utrymme ovanför etiketter */
+        color: black; /* Textfärg för etiketter */
+        background-color: rgba(255, 255, 255, 0.9); /* Ljus bakgrund för etiketter */
+        padding: 5px; /* Padding för etiketter */
+        border-radius: 5px; /* Rundade hörn */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Skugga för bättre kontrast */
+        font-size: 1.2em; /* Öka storlek på etiketter */
+        font-weight: bold; /* Gör etiketter fetare */
     }}
     .stTextInput {{
-        background-color: rgba(255, 255, 255, 0.9); /* Ljus bakgrund för inmatningsfält */
+        background-color: rgba(240, 240, 240, 0.95); /* Ljusgrå bakgrund för inmatningsfält */
         color: black; /* Svart textfärg */
         border: 1px solid #ccc;
-        border-radius: 8px; /* Rundade hörn */
+        border-radius: 5px; /* Rundade hörn */
         padding: 10px;
         margin-bottom: 15px; /* Utrymme mellan fälten */
     }}
     .stButton {{
-        background-color: #007BFF; /* Blå bakgrund för knappar */
-        color: white; /* Vit textfärg på knappar */
-        border-radius: 8px; /* Rundade hörn */
+        background-color: transparent; /* Ingen bakgrund för knappar */
+        color: orange; /* Orange textfärg för knappar */
+        border: 2px solid orange; /* Orange kantlinje */
+        border-radius: 5px; /* Rundade hörn */
         padding: 10px 20px; /* Mer padding */
         font-size: 1em;
         margin-top: 10px;
+        font-weight: bold; /* Gör texten i knappar fetare */
         transition: background-color 0.3s;
     }}
     .stButton:hover {{
-        background-color: #0056b3; /* Mörkare blå vid hover */
+        background-color: rgba(255, 165, 0, 0.3); /* Ljus orange vid hover */
     }}
     </style>
     """
     st.markdown(css, unsafe_allow_html=True)
-
 
 
 # Sökväg till din bild
