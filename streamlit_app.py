@@ -4,6 +4,12 @@ import os
 
 file_name = "inventering.csv"
 
+# URL till bilden i GitHub-repositoryn
+image_url = "https://github.com/användarnamn/repositorynamn/raw/main/.github/githubBakgrundsbild"
+
+# Visa bilden i Streamlit
+st.image(image_url, caption="Bakgrundsbild", use_column_width=True)
+
 # Skapa CSV-fil om den inte redan finns
 if not os.path.exists(file_name):
     with open(file_name, mode='w', newline='') as file:
