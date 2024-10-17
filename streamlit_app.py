@@ -15,6 +15,20 @@ def add_background(image_file):
         background-repeat: no-repeat;
         background-attachment: fixed;
     }}
+    h1 {{
+        color: white;  /* Ändra textfärgen på rubriken */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Lägg till skugga för att förbättra kontrasten */
+    }}
+    .stTextInput, .stButton {{
+        background-color: rgba(255, 255, 255, 0.8); /* Vit bakgrund med transparens */
+        color: black; /* Ändra textfärgen */
+        border: 1px solid #ccc; /* Lägga till en grå kant */
+    }}
+    .stButton {{
+        background-color: rgba(0, 0, 0, 0.7); /* Mörk bakgrund för knappar */
+        color: white; /* Vit text på knappar */
+        text-shadow: none; /* Ta bort textskugga på knappar */
+    }}
     </style>
     """
     st.markdown(css, unsafe_allow_html=True)
