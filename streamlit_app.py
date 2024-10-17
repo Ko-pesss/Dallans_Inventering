@@ -32,16 +32,25 @@ def add_background(image_file):
         padding: 10px; /* Lägga till padding */
         margin-bottom: 10px; /* Utrymme mellan inmatningsfält */
     }}
-    .stButton {{
+   .stButton {{
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
-        border-radius: 10px; /* Rundade hörn på knappar */
-        padding: 12px; /* Padding för knappar */
-        margin-top: 5px; /* Utrymme ovanför knappar */
-        transition: background-color 0.3s; /* Lägga till övergångseffekt */
+        border-radius: 10px;
+        padding: 12px;
+        margin-top: 5px;
+        transition: background-color 0.3s;
     }}
     .stButton:hover {{
-        background-color: rgba(0, 0, 0, 0.9); /* Mörkare när man hovrar */
+        background-color: rgba(0, 0, 0, 0.9);
+    }}
+    /* Specifik styling för etiketter */
+    label {{
+        color: black; /* Ändra textfärg till svart */
+        background-color: rgba(255, 255, 255, 0.7); /* Lägga till bakgrund på etiketter */
+        padding: 5px; /* Padding runt texten */
+        border-radius: 5px; /* Rundade hörn */
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8); /* Skugga för bättre kontrast */
+        font-size: 1.2em; /* Öka storlek på etiketter */
     }}
     </style>
     """
@@ -72,11 +81,11 @@ st.title("Dallans Inventeringsprogram")
 # Inmatningsfält
 produktnamn = st.text_input("Spoltyp")
 kvantitet = st.number_input("Kvantitet", min_value=0)
-plats = st.text_input("Plats (linje/avdelning)")
+plats = st.text_input("Plats (Maskin/Linje)")
 datum = st.text_input("Datum (ÅÅÅÅ-MM-DD)")
 
 # Knapp för att lägga till produkt
-if st.button("Lägg till produkt"):
+if st.button("Lägg till"):
     add_product(produktnamn, kvantitet, plats, datum)
     st.success(f"{produktnamn} har lagts till i inventeringen!")
 
