@@ -10,7 +10,7 @@ def add_background(image_file):
     css = f"""
     <style>
     .stApp {{
-        background-image: url("data:image/webp;base64,{encoded_image}");
+        background-image: url("data:image/png;base64,{encoded_image}");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -31,13 +31,14 @@ def add_background(image_file):
         font-size: 1.2em; /* Öka storlek på etiketter */
         font-weight: bold; /* Gör etiketter fetare */
     }}
-    .stTextInput {{
+    .stTextInput, .stNumberInput {{
         background-color: rgba(240, 240, 240, 0.95); /* Ljusgrå bakgrund för inmatningsfält */
         color: black; /* Svart textfärg */
         border: 1px solid #ccc;
         border-radius: 5px; /* Rundade hörn */
         padding: 10px;
         margin-bottom: 15px; /* Utrymme mellan fälten */
+        width: 100%; /* Full bredd på fält */
     }}
     .stButton {{
         background-color: transparent; /* Ingen bakgrund för knappar */
@@ -57,9 +58,8 @@ def add_background(image_file):
     """
     st.markdown(css, unsafe_allow_html=True)
 
-
 # Sökväg till din bild
-image_path = "Dallansgolf.webp"  # Se till att detta filnamn är korrekt
+image_path = "/mnt/data/image.png"  # Använd den uppladdade bilden
 
 # Anropa funktionen för att sätta bakgrundsbild
 add_background(image_path)
@@ -103,5 +103,3 @@ if st.button("Visa inventering"):
 if st.button("Ladda ner CSV-fil"):
     with open(file_name, 'rb') as f:
         st.download_button('Ladda ner CSV', f, file_name)
-
-
