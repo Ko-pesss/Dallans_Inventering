@@ -17,7 +17,7 @@ def add_background(image_file):
     }}
     h1 {{
         color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
         font-size: 2.5em;
         text-align: center; /* Centrera rubriken */
         font-weight: bold; /* Gör rubriken fetare */
