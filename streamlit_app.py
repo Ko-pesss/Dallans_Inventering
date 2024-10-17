@@ -1,5 +1,7 @@
 import streamlit as st
 import base64
+import os
+import csv
 
 # Funktion för att lägga till en bakgrundsbild
 def add_background(image_file):
@@ -8,7 +10,7 @@ def add_background(image_file):
     css = f"""
     <style>
     .stApp {{
-        background-image: url("data:image/png;base64,{encoded_image}");
+        background-image: url("data:image/webp;base64,{encoded_image}");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -17,19 +19,14 @@ def add_background(image_file):
     """
     st.markdown(css, unsafe_allow_html=True)
 
-# Ange sökvägen till din bild
-image_path = ".github/githubBakgrundsbild"
+# Sökväg till din bild
+image_path = "Dallansgolf.webp"  # Se till att detta filnamn är korrekt
 
-# Lägg till bakgrundsbilden
+# Anropa funktionen för att sätta bakgrundsbild
 add_background(image_path)
 
-# Huvudgränssnitt med Streamlit
-st.title("Inventeringsprogram")
-
-# Resten av din app-kod
-file_name = "inventering.csv"
-
 # Skapa CSV-fil om den inte redan finns
+file_name = "inventering.csv"
 if not os.path.exists(file_name):
     with open(file_name, mode='w', newline='') as file:
         writer = csv.writer(file)
@@ -40,6 +37,9 @@ def add_product(produktnamn, kvantitet, plats, datum):
     with open(file_name, mode='a', newline='') as file:
         writer = csv.writer(file)
         writer.writerow([produktnamn, kvantitet, plats, datum])
+
+# Huvudgränssnitt med Streamlit
+st.title("Inventeringsprogram")
 
 # Inmatningsfält
 produktnamn = st.text_input("Produktnamn")
@@ -64,4 +64,5 @@ if st.button("Visa inventering"):
 if st.button("Ladda ner CSV-fil"):
     with open(file_name, 'rb') as f:
         st.download_button('Ladda ner CSV', f, file_name)
+
 
