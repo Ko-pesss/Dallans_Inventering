@@ -41,8 +41,8 @@ def add_background(image_file):
     }}
     .stButton {{
         background-color: transparent; /* Ingen bakgrund för knappar */
-        color: orange; /* Orange textfärg för knappar */
-        border: 2px solid orange; /* Orange kantlinje */
+        color: black; /* Orange textfärg för knappar */
+        border: 2px solid grey; /* Orange kantlinje */
         border-radius: 5px; /* Rundade hörn */
         padding: 10px 20px; /* Mer padding */
         font-size: 1em;
